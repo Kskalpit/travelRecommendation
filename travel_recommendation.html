@@ -6,9 +6,13 @@
   <title>Responsive Navbar</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body 
+  class="bg-cover bg-center bg-no-repeat min-h-screen"
+  style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');"
+>
 
-  <header class="bg-blue-600 text-white shadow-md">
+  <!-- Header with white background -->
+  <header class="bg-white text-black shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-4 flex-wrap">
 
@@ -20,16 +24,16 @@
 
         <!-- Center: Navigation -->
         <nav class="flex-1 flex justify-center space-x-6 mt-4 sm:mt-0">
-          <a href="#" class="text-white hover:text-gray-200">Home</a>
-          <a href="#" class="text-white hover:text-gray-200">About</a>
-          <a href="#" class="text-white hover:text-gray-200">Contact</a>
+          <a href="./travel_recommendation.html" class="text-black hover:text-gray-600">Home</a>
+          <a href="./about_us.html" class="text-black hover:text-gray-600">About</a>
+          <a href="./contact.html" class="text-black hover:text-gray-600">Contact</a>
         </nav>
 
         <!-- Right: Search Field and Buttons -->
         <div class="flex items-center space-x-2 mt-4 sm:mt-0">
           <input type="text" placeholder="Search..." class="px-2 py-1 rounded-md text-black" />
-          <button class="bg-white text-blue-600 font-semibold px-3 py-1 rounded-md hover:bg-gray-100">Search</button>
-          <button class="bg-gray-200 text-blue-600 font-semibold px-3 py-1 rounded-md hover:bg-gray-300">Reset</button>
+          <button class="bg-blue-600 text-white font-semibold px-3 py-1 rounded-md hover:bg-blue-700">Search</button>
+          <button class="bg-gray-300 text-black font-semibold px-3 py-1 rounded-md hover:bg-gray-400">Reset</button>
         </div>
 
       </div>
