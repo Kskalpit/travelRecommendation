@@ -3,68 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Navbar</title>
+  <title>Travel Explorer</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body 
   class="bg-cover bg-center bg-no-repeat min-h-screen"
   style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');"
 >
-    <header class="bg-white shadow-md text-black">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between py-4">
 
-      <!-- Left: Logo -->
-      <div class="flex items-center space-x-2">
-        <img src="./travnow.png" alt="Logo" class="h-20 w-auto" />
-      </div>
-
-      <!-- Center: Navigation Links -->
-      <nav class="flex space-x-6">
-        <a href="index.html" class="hover:text-blue-600 font-medium">Home</a>
-        <a href="about.html" class="hover:text-blue-600 font-medium">About Us</a>
-        <a href="contact.html" class="hover:text-blue-600 font-medium">Contact Us</a>
-      </nav>
-
-      <!-- Right: Fixed Space -->
-      <div class="w-[300px] hidden sm:block">
-        <input type="text" placeholder="Search..." class="px-2 py-1 rounded-md text-black" />
-          <button class="bg-blue-600 text-white font-semibold px-3 py-1 rounded-md hover:bg-blue-700">Search</button>
-          <button class="bg-gray-300 text-black font-semibold px-3 py-1 rounded-md hover:bg-gray-400">Reset</button>
-        <!-- On Home page, this will contain the search bar + buttons -->
-        <!-- On About/Contact page, it remains empty to maintain layout balance -->
-      </div>
-
-    </div>
-  </div>
-</header>
-<!---->
-  <!-- Header with white background 
-  <header class="bg-white text-black shadow-md">
+  <!-- Navbar -->
+  <header class="bg-white shadow-md text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4 flex-wrap">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-4">
 
+        <!-- Left: Logo -->
         <div class="flex items-center space-x-2">
-          <img src="./travnow.png" alt="Logo" class="h-10 w-10 rounded-full" />
-          <span class="text-xl font-semibold">MyBrand</span>
+          <img src="./travnow.png" alt="Logo" class="h-16 sm:h-20 w-auto" />
         </div>
 
-
-        <nav class="flex-1 flex justify-center space-x-6 mt-4 sm:mt-0">
-          <a href="./travel_recommendation.html" class="text-black hover:text-gray-600">Home</a>
-          <a href="./about_us.html" class="text-black hover:text-gray-600">About</a>
-          <a href="./contact.html" class="text-black hover:text-gray-600">Contact</a>
+        <!-- Center: Navigation Links -->
+        <nav class="flex space-x-4 sm:space-x-6">
+          <a href="./travel_recommendation.html" class="hover:text-blue-600 font-medium text-sm sm:text-base">Home</a>
+          <a href="./about_us.html" class="hover:text-blue-600 font-medium text-sm sm:text-base">About Us</a>
+          <a href="./contact.html" class="hover:text-blue-600 font-medium text-sm sm:text-base">Contact Us</a>
         </nav>
 
-        <div class="flex items-center space-x-2 mt-4 sm:mt-0">
-          <input type="text" placeholder="Search..." class="px-2 py-1 rounded-md text-black" />
-          <button class="bg-blue-600 text-white font-semibold px-3 py-1 rounded-md hover:bg-blue-700">Search</button>
-          <button class="bg-gray-300 text-black font-semibold px-3 py-1 rounded-md hover:bg-gray-400">Reset</button>
+        <!-- Right: Search Bar + Dropdown -->
+        <div class="relative w-full sm:w-[300px] flex flex-col space-y-2">
+
+          <!-- Search Input and Buttons (No Wrapping) -->
+          <div class="w-full flex flex-nowrap gap-2 overflow-x-auto whitespace-nowrap">
+            <input 
+              id="searchInput" 
+              type="text" 
+              placeholder="Search..." 
+              class="flex-grow min-w-0 px-2 py-1 rounded-md text-black" 
+            />
+            <button 
+              id="searchBtn" 
+              class="bg-blue-600 text-white font-semibold px-3 py-1 rounded-md hover:bg-blue-700 shrink-0"
+            >
+              Search
+            </button>
+            <button 
+              id="resetBtn" 
+              class="bg-gray-300 text-black font-semibold px-3 py-1 rounded-md hover:bg-gray-400 shrink-0"
+            >
+              Reset
+            </button>
+          </div>
+
+          <!-- Dropdown Container -->
+          <div 
+            id="recommendationDropdown"
+            class="absolute top-full mt-2 w-full bg-white rounded-lg shadow-lg z-50 hidden max-h-80 overflow-y-auto"
+          >
+            <!-- Travel cards will appear here dynamically -->
+          </div>
+
         </div>
-    -->
+
       </div>
     </div>
   </header>
 
+  <!-- JavaScript to handle dropdown logic -->
+  <script src="./travel_recommendation.js"></script>
 </body>
 </html>
