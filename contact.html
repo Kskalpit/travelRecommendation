@@ -37,7 +37,38 @@
     </div>
   </div>
 </header>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+  
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent page reload
+  
+        // Collect form data
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+  
+        // Create the JSON structure
+        const contactData = {
+          name,
+          email,
+          message,
+          submittedAt: new Date().toISOString()
+        };
+  
+        // Show confirmation message
+        alert("Thank you! Your message has been received.");
+  
+        // Log the data (simulate saving)
+        console.log("Saved contact data:", JSON.stringify(contactData, null, 2));
+  
+        // ✅ Clear the form after submission
+        form.reset();
+      });
+    });
+  </script>
+  
   <!-- Contact Form Section -->
   <section class="max-w-3xl mx-auto mt-12 p-8 rounded-xl text-blue">
     <h1 class="text-3xl font-bold mb-6">Contact Us</h1>
