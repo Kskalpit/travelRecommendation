@@ -13,24 +13,30 @@
 
   <!-- Navbar -->
   <header class="bg-white shadow-md text-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4 flex-wrap">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between py-4">
 
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-          <img src="./travnow.png" alt="Logo" class="h-20 w-auto" />
-        </div>
-
-        <!-- Nav Items -->
-        <nav class="flex-1 flex justify-center space-x-6 mt-4 sm:mt-0">
-          <a href="./travel_recommendation.html" class="hover:text-blue-600 font-medium">Home</a>
-          <a href="./about_us.html" class="hover:text-blue-600 font-medium">About Us</a>
-          <a href="./contact.html" class="hover:text-blue-600 font-medium">Contact Us</a>
-        </nav>
-
+      <!-- Left: Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="./travnow.png" alt="Logo" class="h-20 w-auto" />
       </div>
+
+      <!-- Center: Navigation Links -->
+      <nav class="flex space-x-6">
+        <a href="index.html" class="hover:text-blue-600 font-medium">Home</a>
+        <a href="about.html" class="hover:text-blue-600 font-medium">About Us</a>
+        <a href="contact.html" class="hover:text-blue-600 font-medium">Contact Us</a>
+      </nav>
+
+      <!-- Right: Fixed Space -->
+      <div class="w-[300px] hidden sm:block">
+        <!-- On Home page, this will contain the search bar + buttons -->
+        <!-- On About/Contact page, it remains empty to maintain layout balance -->
+      </div>
+
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- Contact Form Section -->
   <section class="max-w-3xl mx-auto mt-12 p-8 rounded-xl text-blue">

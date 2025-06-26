@@ -11,26 +11,32 @@
   style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');"
 >
 
-  <!-- Navbar -->
-  <header class="bg-white shadow-md text-black">
+<header class="bg-white shadow-md text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4 flex-wrap">
-
-        <!-- Left: Logo and Brand -->
+      <div class="flex items-center justify-between py-4">
+  
+        <!-- Left: Logo -->
         <div class="flex items-center space-x-2">
           <img src="./travnow.png" alt="Logo" class="h-20 w-auto" />
         </div>
-
-        <!-- Center: Navigation -->
-        <nav class="flex-1 flex justify-center space-x-6 mt-4 sm:mt-0">
-          <a href="./travel_recommendation.html" class="hover:text-blue-600 font-medium">Home</a>
-          <a href="./about_us.html" class="hover:text-blue-600 font-medium">About Us</a>
-          <a href="./contact.html" class="hover:text-blue-600 font-medium">Contact Us</a>
+  
+        <!-- Center: Navigation Links -->
+        <nav class="flex space-x-6">
+          <a href="index.html" class="hover:text-blue-600 font-medium">Home</a>
+          <a href="about.html" class="hover:text-blue-600 font-medium">About Us</a>
+          <a href="contact.html" class="hover:text-blue-600 font-medium">Contact Us</a>
         </nav>
-
+  
+        <!-- Right: Fixed Space -->
+        <div class="w-[300px] hidden sm:block">
+          <!-- On Home page, this will contain the search bar + buttons -->
+          <!-- On About/Contact page, it remains empty to maintain layout balance -->
+        </div>
+  
       </div>
     </div>
   </header>
+  
 
 <!-- About Section -->
 <section class="max-w-4xl mx-auto mt-10 p-8 rounded-xl text-white">

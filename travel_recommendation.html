@@ -10,32 +10,58 @@
   class="bg-cover bg-center bg-no-repeat min-h-screen"
   style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');"
 >
+    <header class="bg-white shadow-md text-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between py-4">
 
-  <!-- Header with white background -->
+      <!-- Left: Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="./travnow.png" alt="Logo" class="h-20 w-auto" />
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <nav class="flex space-x-6">
+        <a href="index.html" class="hover:text-blue-600 font-medium">Home</a>
+        <a href="about.html" class="hover:text-blue-600 font-medium">About Us</a>
+        <a href="contact.html" class="hover:text-blue-600 font-medium">Contact Us</a>
+      </nav>
+
+      <!-- Right: Fixed Space -->
+      <div class="w-[300px] hidden sm:block">
+        <input type="text" placeholder="Search..." class="px-2 py-1 rounded-md text-black" />
+          <button class="bg-blue-600 text-white font-semibold px-3 py-1 rounded-md hover:bg-blue-700">Search</button>
+          <button class="bg-gray-300 text-black font-semibold px-3 py-1 rounded-md hover:bg-gray-400">Reset</button>
+        <!-- On Home page, this will contain the search bar + buttons -->
+        <!-- On About/Contact page, it remains empty to maintain layout balance -->
+      </div>
+
+    </div>
+  </div>
+</header>
+<!---->
+  <!-- Header with white background 
   <header class="bg-white text-black shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-4 flex-wrap">
 
-        <!-- Left: Logo and Brand -->
         <div class="flex items-center space-x-2">
           <img src="./travnow.png" alt="Logo" class="h-10 w-10 rounded-full" />
-          <!--<span class="text-xl font-semibold">MyBrand</span>-->
+          <span class="text-xl font-semibold">MyBrand</span>
         </div>
 
-        <!-- Center: Navigation -->
+
         <nav class="flex-1 flex justify-center space-x-6 mt-4 sm:mt-0">
           <a href="./travel_recommendation.html" class="text-black hover:text-gray-600">Home</a>
           <a href="./about_us.html" class="text-black hover:text-gray-600">About</a>
           <a href="./contact.html" class="text-black hover:text-gray-600">Contact</a>
         </nav>
 
-        <!-- Right: Search Field and Buttons -->
         <div class="flex items-center space-x-2 mt-4 sm:mt-0">
           <input type="text" placeholder="Search..." class="px-2 py-1 rounded-md text-black" />
           <button class="bg-blue-600 text-white font-semibold px-3 py-1 rounded-md hover:bg-blue-700">Search</button>
           <button class="bg-gray-300 text-black font-semibold px-3 py-1 rounded-md hover:bg-gray-400">Reset</button>
         </div>
-
+    -->
       </div>
     </div>
   </header>
